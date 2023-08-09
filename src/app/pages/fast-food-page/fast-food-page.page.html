@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Fast Food</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ng-container *ngFor="let item of menuItems">
+        <ion-col size="6" *ngIf="item.category === 'fastfood'">
+          <ion-card>
+            <ion-img class="card-image" [src]="item.image"></ion-img>
+            <ion-card-header>
+              <ion-card-subtitle>{{ item.price }}</ion-card-subtitle>
+              <ion-card-title id="food-title">{{ item.name }}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+</ion-content>
