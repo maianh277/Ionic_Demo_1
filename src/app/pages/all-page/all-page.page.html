@@ -15,8 +15,16 @@
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let item of menuItems">
-        <ion-card [routerLink]="['/detail-page', item.id]">
-          <ion-img class="card-image" [src]="item.image"></ion-img>
+        <ion-card>
+          <!-- <a [routerLink]="['/detail-page,item.id']"> -->
+          <!-- <ion-route url="/detail-page/:item.id" component="detail-page" -->
+          ><ion-img
+            class="card-image"
+            [src]="item.image"
+            (click)="navigateToDetailPage(item.id)"
+          ></ion-img>
+          <!-- </ion-route> -->
+          <!-- </a> -->
           <ion-card-header>
             <ion-card-subtitle>{{ item.price }}</ion-card-subtitle>
             <ion-card-title id="food-title">{{ item.name }}</ion-card-title>

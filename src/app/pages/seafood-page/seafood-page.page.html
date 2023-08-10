@@ -18,7 +18,11 @@
       <ng-container *ngFor="let item of menuItems">
         <ion-col size="6" *ngIf="item.category === 'seafood'">
           <ion-card>
-            <ion-img class="card-image" [src]="item.image"></ion-img>
+            <ion-img
+              class="card-image"
+              [src]="item.image"
+              (click)="navigateToDetailPage(item.id)"
+            ></ion-img>
             <ion-card-header>
               <ion-card-subtitle>{{ item.price }}</ion-card-subtitle>
               <ion-card-title id="food-title">{{ item.name }}</ion-card-title>

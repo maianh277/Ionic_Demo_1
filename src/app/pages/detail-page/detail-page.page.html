@@ -6,10 +6,34 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detailPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="content-background">
+  <div class="overlay-background">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-img class="card-image" [src]="selectedItem?.image"></ion-img>
+          <ion-row>
+            <ion-col id="food-title-price-container">
+              <span id="food-title">{{ selectedItem?.name }}</span>
+              <span id="food-price">{{ selectedItem?.price }}$</span>
+            </ion-col>
+          </ion-row>
+          <span id="food-rating-container">
+            <span id="food-rating"
+              ><ion-icon name="star-outline"></ion-icon>{{ selectedItem?.rating
+              }}</span
+            >
+          </span>
+          <span id="food-timer-container">
+            <span id="food-timer"
+              ><ion-icon name="timer-outline"></ion-icon>{{
+              selectedItem?.deliveryTime }}</span
+            >
+          </span>
+          <h1>About</h1>
+          <p id="food-description">{{ selectedItem?.description }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

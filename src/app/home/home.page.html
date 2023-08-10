@@ -47,7 +47,11 @@
     <ion-row>
       <ion-col *ngFor="let item of filterItemsByRating(menuItems, 4.5)">
         <ion-card>
-          <ion-img class="card-image" [src]="item.image"></ion-img>
+          <ion-img
+            (click)="navigateToDetailPage(item.id)"
+            class="card-image"
+            [src]="item.image"
+          ></ion-img>
           <ion-card-header>
             <ion-card-subtitle>{{ item.price }}</ion-card-subtitle>
             <ion-card-title id="food-title">{{ item.name }}</ion-card-title>

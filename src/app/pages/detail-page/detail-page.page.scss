@@ -1,0 +1,61 @@
+#food-price {
+  color: rgb(255, 204, 0);
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#food-title {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+#food-title-price-container {
+  margin-bottom: 10px;
+}
+#food-rating,
+#food-timer {
+  font-size: 20px;
+  color: white;
+  //   padding: 10px;
+}
+h1 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+#food-description {
+  margin: 0px 15px;
+}
+#food-rating-container,
+#food-timer-container {
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-left: 15px;
+  background: blueviolet;
+}
+ion-icon {
+  margin-right: 5px;
+}
+
+ion-content.content-background {
+  --background: blueviolet;
+}
+.overlay-background {
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  top: 300px;
+  left: 0px;
+  right: 0px;
+  padding-top: 50px;
+}
+ion-img {
+  position: absolute;
+  top: -150px;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}

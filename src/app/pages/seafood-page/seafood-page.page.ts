@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-seafood-page',
   templateUrl: './seafood-page.page.html',
@@ -81,7 +81,10 @@ export class SeafoodPagePage implements OnInit {
       category: 'fastfood',
     },
   ];
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+  navigateToDetailPage(id: number) {
+    this.router.navigate(['/detail-page', id]);
+  }
 }
